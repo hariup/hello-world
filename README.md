@@ -10,7 +10,7 @@ The repo now holds my personal profile site: a static site built with **Astro** 
 |---|---|
 | Name, headline, credentials, roles, expertise, about, contact | `src/content/profile.json` |
 | Impact stories (one file each) | `src/content/stories/*.md` |
-| Portrait | put `portrait.jpg` in `public/`, then set `"portrait": "/portrait.jpg"` in `profile.json` |
+| Portrait | `public/portrait.webp` (800×1000), referenced by `"portrait"` in `profile.json` |
 
 Anything containing `[VERIFY]` renders on the page as a visible **To verify** badge.
 List every open item with:

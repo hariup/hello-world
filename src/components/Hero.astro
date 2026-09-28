@@ -18,14 +18,15 @@ const initials = profile.name
       <p class="mt-6 text-small text-muted">{profile.location}</p>
     </div>
 
-    <div class="reveal [animation-delay:120ms]">
+    <div class="reveal max-w-[18rem] [animation-delay:120ms] md:max-w-none">
       {
         profile.portrait ? (
           <img
             src={profile.portrait}
             alt={`Portrait of ${profile.name}`}
-            width="640"
-            height="800"
+            width="800"
+            height="1000"
+            fetchpriority="high"
             class="aspect-[4/5] w-full rounded-sm object-cover"
           />
         ) : (
