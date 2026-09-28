@@ -1,0 +1,49 @@
+---
+// The signature device: bronze year markers on a single line, then the roles in detail.
+import { profile } from '../lib/profile';
+import Section from './Section.astro';
+---
+
+<Section id="experience" eyebrow="Experience" title="Two decades of delivery.">
+  <ol class="relative mb-16 flex justify-between" aria-label="Career markers">
+    <span class="absolute top-[5px] right-0 left-0 h-px bg-rule" aria-hidden="true"></span>
+    {
+      profile.timelineMarkers.map((marker, i) => {
+        const isLast = i === profile.timelineMarkers.length - 1;
+        return (
+          <li class="relative flex flex-col items-center gap-3 first:items-start last:items-end">
+            <span
+              class:list={[
+                'size-[11px] rounded-full border-2 border-bronze',
+                isLast ? 'bg-bronze' : 'bg-stone',
+              ]}
+            />
+            <span
+              class:list={[
+                'font-serif text-small sm:text-lead',
+                isLast ? 'text-bronze' : 'text-ink',
+              ]}
+            >
+              {marker}
+            </span>
+          </li>
+        );
+      })
+    }
+  </ol>
+
+  <ol class="divide-y divide-rule border-y border-rule">
+    {
+      profile.roles.map((role) => (
+        <li class="grid gap-2 py-8 sm:grid-cols-[9rem_1fr] sm:gap-10">
+          <p class="text-small font-medium text-bronze tabular-nums">{role.dates}</p>
+          <div>
+            <h3 class="text-lead font-medium">{role.company}</h3>
+            <p class="mt-1 text-small text-muted">{role.title}</p>
+            <p class="mt-4 max-w-2xl text-ink/85">{role.description}</p>
+          </div>
+        </li>
+      ))
+    }
+  </ol>
+</Section>

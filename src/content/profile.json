@@ -1,0 +1,84 @@
+{
+  "name": "Harish Subramanian",
+  "headline": "Technology & Delivery Leader",
+  "tagline": "Telecom Platforms · AI-Enabled Delivery · Enterprise Transformation",
+  "positioning": "I lead the delivery of complex technology platforms — connecting strategy, engineering, quality and operations into predictable, measurable execution.",
+  "location": "Denver, Colorado",
+  "portrait": null,
+
+  "credentials": [
+    "20+ years in technology delivery and transformation",
+    "Telecom · Healthcare · SaaS",
+    "Portfolios of $6M–$15M",
+    "Certified SAFe practitioner and trainer"
+  ],
+
+  "timelineMarkers": ["2006", "2010", "2018", "2020", "Today"],
+
+  "roles": [
+    {
+      "company": "Charter Communications",
+      "title": "Director of Software Engineering",
+      "dates": "2020–Present",
+      "description": "Leads end-to-end delivery for a device activation and provisioning platform, spanning portfolio, product, quality engineering and DevOps."
+    },
+    {
+      "company": "DXC Technology",
+      "title": "Senior Program Manager, Global Salesforce Practice",
+      "dates": "2019–2020",
+      "description": "Led a ~$15M-per-quarter Salesforce and MuleSoft delivery portfolio across the Americas, Europe and India."
+    },
+    {
+      "company": "UST Global",
+      "title": "Advisor, Healthcare Platform Services",
+      "dates": "2018–2019",
+      "description": "Advised an ~$8M-per-quarter healthcare payer platform practice through two state-level implementations."
+    },
+    {
+      "company": "Cognizant",
+      "title": "Manager, Cognizant Business Consulting",
+      "dates": "2010–2018",
+      "description": "Healthcare transformation advisory, then data analytics and BI for a national health insurer; led a Solutions Consulting Center of Excellence."
+    },
+    {
+      "company": "inLogic Technologies (Medtech Global)",
+      "title": "Manager, Services Delivery",
+      "dates": "2006–2010",
+      "description": "Owned a ~AU$5M/yr healthcare software portfolio for Medtech Global across Australia, New Zealand and Ireland, from legacy support to a next-generation SaaS platform."
+    },
+    {
+      "company": "Earlier",
+      "title": "Oracle, Comodo",
+      "dates": "2004–2006",
+      "description": "Business development and technology sales."
+    }
+  ],
+
+  "expertise": [
+    {
+      "title": "Telecom Platform Delivery",
+      "description": "Broadband device activation and provisioning across DOCSIS 3.1/4.0, CableLabs standards and device-management protocols (TR-069, USP/TR-369), with test strategy spanning device, firmware and vendor combinations."
+    },
+    {
+      "title": "AI-Enabled Delivery",
+      "description": "Tool-agnostic AI governance and adoption frameworks, hands-on agentic AI prototyping, and data-driven delivery metrics for predictability, capacity and risk."
+    },
+    {
+      "title": "Delivery Transformation",
+      "description": "Scaled agile operating models, release assurance, cross-team coordination and estimation rigor, informed by work as a certified SAFe trainer."
+    }
+  ],
+
+  "about": [
+    "Harish Subramanian is a technology and delivery leader with more than twenty years of experience across telecommunications, healthcare and enterprise SaaS.",
+    "At Charter Communications, he leads end-to-end delivery for a broadband device activation and provisioning platform, bringing portfolio management, product management, quality engineering and DevOps together under one delivery discipline. His current focus is AI-enabled delivery: helping engineering organizations adopt AI in a governed, tool-agnostic way, and using delivery data to make execution more predictable.",
+    "Earlier, he spent a decade in healthcare transformation with Cognizant and UST, leading platform implementations, building analytics and decision-support capabilities, and advising organizations entering new markets, after leading healthcare software delivery across Australia, New Zealand and Ireland. He also led a global Salesforce delivery portfolio at DXC Technology.",
+    "He is a certified SAFe practitioner and trainer, and holds CSPO and SAFe Advanced Scrum Master certifications. He is based in Denver, Colorado."
+  ],
+
+  "contact": {
+    "heading": "Let's connect.",
+    "email": "[VERIFY]",
+    "linkedin": "[VERIFY]"
+  }
+}

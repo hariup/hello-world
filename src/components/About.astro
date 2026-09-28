@@ -1,0 +1,14 @@
+---
+import { profile } from '../lib/profile';
+import Section from './Section.astro';
+---
+
+<Section id="about" eyebrow="About" title={profile.name}>
+  <div class="max-w-2xl space-y-6">
+    {
+      profile.about.map((paragraph, i) => (
+        <p class:list={[i === 0 ? 'text-lead' : 'text-ink/85']}>{paragraph}</p>
+      ))
+    }
+  </div>
+</Section>

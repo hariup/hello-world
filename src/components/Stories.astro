@@ -1,0 +1,14 @@
+---
+import { getCollection } from 'astro:content';
+import Section from './Section.astro';
+import StoryCard from './StoryCard.astro';
+
+// Sorted by the `order` field in each story's frontmatter.
+const stories = (await getCollection('stories')).sort((a, b) => a.data.order - b.data.order);
+---
+
+<Section id="impact" eyebrow="Impact" title="Selected work.">
+  <div class="divide-y divide-rule border-y border-rule">
+    {stories.map((story, index) => <StoryCard story={story} index={index} />)}
+  </div>
+</Section>

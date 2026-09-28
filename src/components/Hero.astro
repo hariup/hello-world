@@ -1,0 +1,46 @@
+---
+import { profile } from '../lib/profile';
+import Credentials from './Credentials.astro';
+
+const initials = profile.name
+  .split(' ')
+  .map((word) => word[0])
+  .join('');
+---
+
+<section class="mx-auto max-w-5xl px-6 pt-16 pb-24 sm:px-10 sm:pt-24 sm:pb-32">
+  <div class="grid items-end gap-12 md:grid-cols-[1fr_minmax(0,20rem)] md:gap-16">
+    <div class="reveal">
+      <p class="eyebrow">{profile.headline}</p>
+      <h1 class="mt-5 font-serif text-display tracking-tight">{profile.name}</h1>
+      <p class="mt-6 text-small font-medium tracking-wide text-muted">{profile.tagline}</p>
+      <p class="mt-8 max-w-xl text-lead text-ink/90">{profile.positioning}</p>
+      <p class="mt-6 text-small text-muted">{profile.location}</p>
+    </div>
+
+    <div class="reveal [animation-delay:120ms]">
+      {
+        profile.portrait ? (
+          <img
+            src={profile.portrait}
+            alt={`Portrait of ${profile.name}`}
+            width="640"
+            height="800"
+            class="aspect-[4/5] w-full rounded-sm object-cover"
+          />
+        ) : (
+          <div
+            class="flex aspect-[4/5] w-full flex-col items-center justify-center gap-4 rounded-sm bg-stone-deep"
+            role="img"
+            aria-label="Portrait placeholder"
+          >
+            <span class="font-serif text-section text-bronze">{initials}</span>
+            <span class="todo">Portrait to add</span>
+          </div>
+        )
+      }
+    </div>
+  </div>
+
+  <Credentials />
+</section>

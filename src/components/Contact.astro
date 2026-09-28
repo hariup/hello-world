@@ -1,0 +1,37 @@
+---
+import { profile } from '../lib/profile';
+import { needsVerify } from '../lib/verify';
+import Section from './Section.astro';
+
+const { heading, email, linkedin } = profile.contact;
+
+// Unconfirmed values show as a visible TODO instead of a broken link.
+const channels = [
+  { label: 'Email', value: email, href: `mailto:${email}`, display: email },
+  { label: 'LinkedIn', value: linkedin, href: linkedin, display: 'LinkedIn profile' },
+];
+---
+
+<Section id="contact" eyebrow="Contact" title={heading}>
+  <dl class="grid max-w-2xl gap-8 sm:grid-cols-2">
+    {
+      channels.map((channel) => (
+        <div class="border-t border-rule pt-5">
+          <dt class="text-small text-muted">{channel.label}</dt>
+          <dd class="mt-2 text-lead">
+            {needsVerify(channel.value) ? (
+              <span class="todo !mx-0">To verify</span>
+            ) : (
+              <a
+                href={channel.href}
+                class="underline decoration-bronze/40 underline-offset-4 transition-colors hover:text-bronze hover:decoration-bronze"
+              >
+                {channel.display}
+              </a>
+            )}
+          </dd>
+        </div>
+      ))
+    }
+  </dl>
+</Section>

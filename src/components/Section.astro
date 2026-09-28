@@ -1,0 +1,22 @@
+---
+// Shared wrapper so every section has the same width, spacing and heading style.
+interface Props {
+  id: string;
+  eyebrow: string;
+  title: string;
+}
+
+const { id, eyebrow, title } = Astro.props;
+---
+
+<section id={id} aria-labelledby={`${id}-title`} class="border-t border-rule">
+  <div class="mx-auto max-w-5xl px-6 py-24 sm:px-10 sm:py-32">
+    <p class="eyebrow">{eyebrow}</p>
+    <h2 id={`${id}-title`} class="mt-4 max-w-2xl font-serif text-section tracking-tight">
+      {title}
+    </h2>
+    <div class="mt-14 sm:mt-16">
+      <slot />
+    </div>
+  </div>
+</section>

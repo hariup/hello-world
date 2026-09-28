@@ -1,0 +1,48 @@
+---
+// One page per file in src/content/stories/, generated at build time.
+import { getCollection, render } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+import Verify from '../../components/Verify.astro';
+import { profile } from '../../lib/profile';
+
+export async function getStaticPaths() {
+  const stories = await getCollection('stories');
+  return stories.map((story) => ({ params: { id: story.id }, props: { story } }));
+}
+
+const { story } = Astro.props;
+const { Content } = await render(story);
+const { title, summary, proof } = story.data;
+---
+
+<Base title={`${title} — ${profile.name}`} description={summary}>
+  <article class="mx-auto max-w-3xl px-6 pt-16 pb-24 sm:px-10 sm:pt-24 sm:pb-32">
+    <a href="/#impact" class="text-small text-muted transition-colors hover:text-bronze">
+      <span aria-hidden="true">←</span> All work
+    </a>
+    <header class="reveal mt-12">
+      <p class="eyebrow">Impact</p>
+      <h1 class="mt-5 font-serif text-section tracking-tight">{title}</h1>
+      <p class="mt-6 text-lead text-ink/90">{summary}</p>
+    </header>
+
+    <div class="mt-14 space-y-6 border-t border-rule pt-10 text-ink/85">
+      <Content />
+    </div>
+
+    {
+      proof.length > 0 && (
+        <aside class="mt-14 border-l-2 border-bronze pl-6" aria-label="Outcomes">
+          <p class="eyebrow">Outcomes</p>
+          <ul class="mt-4 space-y-3">
+            {proof.map((item) => (
+              <li class="text-lead">
+                <Verify text={item} />
+              </li>
+            ))}
+          </ul>
+        </aside>
+      )
+    }
+  </article>
+</Base>

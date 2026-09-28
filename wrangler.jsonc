@@ -1,0 +1,10 @@
+// Cloudflare deploy settings (Workers with static assets).
+// Astro builds the site into ./dist; Cloudflare serves those files from its global network.
+{
+  "name": "harish-subramanian",
+  "compatibility_date": "2026-09-01",
+  "assets": {
+    "directory": "./dist",
+    "not_found_handling": "404-page"
+  }
+}

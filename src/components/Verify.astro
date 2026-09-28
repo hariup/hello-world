@@ -1,0 +1,19 @@
+---
+// Renders text, replacing each [VERIFY] with a visible "To verify" badge.
+import { splitVerify } from '../lib/verify';
+
+interface Props {
+  text: string;
+}
+
+const parts = splitVerify(Astro.props.text);
+---
+
+{
+  parts.map((part, i) => (
+    <>
+      {part.trim()}
+      {i < parts.length - 1 && <span class="todo">To verify</span>}
+    </>
+  ))
+}

@@ -1,0 +1,12 @@
+---
+import { profile } from '../lib/profile';
+---
+
+<footer class="border-t border-rule">
+  <div
+    class="mx-auto flex max-w-5xl flex-wrap justify-between gap-4 px-6 py-10 text-small text-muted sm:px-10"
+  >
+    <p>© {new Date().getFullYear()} {profile.name}</p>
+    <p>{profile.location}</p>
+  </div>
+</footer>

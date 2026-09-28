@@ -1,0 +1,17 @@
+---
+import { profile } from '../lib/profile';
+import Section from './Section.astro';
+---
+
+<Section id="expertise" eyebrow="Expertise" title="Where I focus.">
+  <ul class="grid gap-12 md:grid-cols-3 md:gap-10">
+    {
+      profile.expertise.map((pillar) => (
+        <li class="border-t-2 border-bronze pt-6">
+          <h3 class="font-serif text-lead">{pillar.title}</h3>
+          <p class="mt-4 text-ink/85">{pillar.description}</p>
+        </li>
+      ))
+    }
+  </ul>
+</Section>
